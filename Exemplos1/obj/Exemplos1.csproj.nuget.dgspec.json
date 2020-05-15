@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dev\\macoritti\\Exemplos1\\Exemplos1\\Exemplos1.csproj": {}
+    "D:\\dev\\macoratti\\Exemplos1\\Exemplos1\\Exemplos1.csproj": {}
   },
   "projects": {
-    "D:\\dev\\macoritti\\Exemplos1\\Exemplos1\\Exemplos1.csproj": {
+    "D:\\dev\\macoratti\\Exemplos1\\Exemplos1\\Exemplos1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dev\\macoritti\\Exemplos1\\Exemplos1\\Exemplos1.csproj",
+        "projectUniqueName": "D:\\dev\\macoratti\\Exemplos1\\Exemplos1\\Exemplos1.csproj",
         "projectName": "Exemplos1",
-        "projectPath": "D:\\dev\\macoritti\\Exemplos1\\Exemplos1\\Exemplos1.csproj",
+        "projectPath": "D:\\dev\\macoratti\\Exemplos1\\Exemplos1\\Exemplos1.csproj",
         "packagesPath": "C:\\Users\\GDIAS\\.nuget\\packages\\",
-        "outputPath": "D:\\dev\\macoritti\\Exemplos1\\Exemplos1\\obj\\",
+        "outputPath": "D:\\dev\\macoratti\\Exemplos1\\Exemplos1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GDIAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
