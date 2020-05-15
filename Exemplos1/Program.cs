@@ -6,11 +6,13 @@ namespace Exemplos1
     {
         static void Main(string[] args)
         {
-            RegistrarOcorrencias registrarOcorrencias = new RegistrarOcorrencias();
+            RegistrarOcorrencias registrarOcorrencias = new RegistrarOcorrencias(new RegistrarNoConsole());
+            registrarOcorrencias.Registrar("Estou registrando console.");
 
-            registrarOcorrencias.RegistrarNoConsole("Registrei no console");
-            registrarOcorrencias.RegistrarNoArquivo("Arquivo", "Registrei no arquivo.");
-            registrarOcorrencias.RegistrarJSON("JSON", "Registrei no JSON.");
+            RegistrarOcorrencias registrarOcorrencias2 = new RegistrarOcorrencias(new RegistrarNoArquivo());
+            registrarOcorrencias2.Registrar("Estou registrando no arquivo.");
+
+
         }
     }
 }
