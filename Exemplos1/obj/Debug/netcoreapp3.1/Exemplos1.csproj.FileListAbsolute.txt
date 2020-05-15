@@ -1,0 +1,13 @@
+D:\dev\macoritti\Exemplos1\Exemplos1\bin\Debug\netcoreapp3.1\Exemplos1.exe
+D:\dev\macoritti\Exemplos1\Exemplos1\bin\Debug\netcoreapp3.1\Exemplos1.deps.json
+D:\dev\macoritti\Exemplos1\Exemplos1\bin\Debug\netcoreapp3.1\Exemplos1.runtimeconfig.json
+D:\dev\macoritti\Exemplos1\Exemplos1\bin\Debug\netcoreapp3.1\Exemplos1.runtimeconfig.dev.json
+D:\dev\macoritti\Exemplos1\Exemplos1\bin\Debug\netcoreapp3.1\Exemplos1.dll
+D:\dev\macoritti\Exemplos1\Exemplos1\bin\Debug\netcoreapp3.1\Exemplos1.pdb
+D:\dev\macoritti\Exemplos1\Exemplos1\obj\Debug\netcoreapp3.1\Exemplos1.csprojAssemblyReference.cache
+D:\dev\macoritti\Exemplos1\Exemplos1\obj\Debug\netcoreapp3.1\Exemplos1.csproj.CoreCompileInputs.cache
+D:\dev\macoritti\Exemplos1\Exemplos1\obj\Debug\netcoreapp3.1\Exemplos1.AssemblyInfoInputs.cache
+D:\dev\macoritti\Exemplos1\Exemplos1\obj\Debug\netcoreapp3.1\Exemplos1.AssemblyInfo.cs
+D:\dev\macoritti\Exemplos1\Exemplos1\obj\Debug\netcoreapp3.1\Exemplos1.dll
+D:\dev\macoritti\Exemplos1\Exemplos1\obj\Debug\netcoreapp3.1\Exemplos1.pdb
+D:\dev\macoritti\Exemplos1\Exemplos1\obj\Debug\netcoreapp3.1\Exemplos1.genruntimeconfig.cache
