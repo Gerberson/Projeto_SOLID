@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Exemplos1
 {
@@ -6,31 +7,43 @@ namespace Exemplos1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new Exemplo("Teste da palavra THIS"));
+            var resultado1 = Somar(100, 200);
+            var resultado2 = Somar(100, 200, 300);
+            var resultado3 = Somar(1, 2, 3, 4);
+            var resultado4 = Somar(new int[] { 1, 2, 3, 4 }); 
+            Console.WriteLine(resultado1);
+            Console.WriteLine(resultado2);
+            Console.WriteLine(resultado3);
+            Console.WriteLine(resultado4);
+
+
+
         }
-    }
 
-    class Teste
-    {
-        public string Nome { get; set; }
-
-        public Teste(Exemplo exemplo)
+        static public int Somar(int numero1, int numero2)
         {
-            Nome = exemplo.Fornecedor;
+            return numero1 + numero2;
         }
-    }
 
-    class Exemplo
-    {
-        public string Fornecedor { get; set; }
-
-        public Exemplo(string nome)
+        //SOBRE CARGA DE METODOS SO É POSSIVEL SE O PARAMETRO MUDAR
+        static public double Somar(double numero1, int numero2)
         {
-            Fornecedor = nome;
+            return numero1 + numero2;
+        }
 
-            Teste teste = new Teste(this);
+        static public int Somar(int numero1, int numero2, int numero3)
+        {
+            return numero1 + numero2 + numero3;
+        }
 
-            Console.WriteLine(teste.Nome);
+        static public int Somar(params int[] numeros)
+        {
+            var resultado = 0;
+            foreach (int num in numeros)
+            {
+                resultado += num;
+            }
+            return resultado;
         }
     }
 }
