@@ -6,13 +6,13 @@ namespace Exemplos1
     {
         static void Main(string[] args)
         {
-            Escola escola = new Escola("Lirios");
+            Departamento departamento = new Departamento("Funcionarios");
 
-            escola.AddDepartamento("Contabilidade");
-            escola.AddDepartamento("Recursos Humanos");
-            escola.AddDepartamento("Limpeza");
+            departamento.AddProfessores("Ana Lucia");
+            departamento.AddProfessores("Marta Soares");
+            departamento.AddProfessores("Lidia Carvalho");
 
-            Console.WriteLine(escola);
+            Console.WriteLine(departamento);
         }
     }
 }
