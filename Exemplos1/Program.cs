@@ -6,13 +6,21 @@ namespace Exemplos1
     {
         static void Main(string[] args)
         {
-            Departamento departamento = new Departamento("Funcionarios");
+            Quadrado q = new Quadrado();
+            Console.WriteLine(q.Descricao());
 
-            departamento.AddProfessores("Ana Lucia");
-            departamento.AddProfessores("Marta Soares");
-            departamento.AddProfessores("Lidia Carvalho");
+            Console.WriteLine("Informe a cor do Quadrado:");
+            q.Cor = Console.ReadLine();
 
-            Console.WriteLine(departamento);
+            Console.WriteLine("Informe o lado do Quadrado:");
+            q.Lado = double.Parse(Console.ReadLine());
+
+            q.CalcularArea();
+            q.CalcularPerimetro();
+
+            Console.WriteLine(q.Area);
+            Console.WriteLine(q.Perimetro);
+            Console.WriteLine(q.Cor);
         }
     }
 }
