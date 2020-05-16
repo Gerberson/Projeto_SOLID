@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Exemplos1
 {
-    class Triangulo : Figura
+    class Circulo : Figura
     {
         public override void Desenhar()
         {
-            Console.WriteLine("Triangulo sobrescrevendo Figura");
+            Console.WriteLine("Circulo sobrescrevendo Figura");
         }
     }
 }
