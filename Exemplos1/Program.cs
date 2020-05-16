@@ -9,16 +9,7 @@ namespace Exemplos1
     {
         static void Main(string[] args)
         {
-            List<Figura> figuras = new List<Figura>
-            {
-                new Triangulo(),
-                new Circulo()
-            };
-
-            foreach (var figura in figuras)
-            {
-                figura.Desenhar();
-            }
+            
         }
     }
 }
