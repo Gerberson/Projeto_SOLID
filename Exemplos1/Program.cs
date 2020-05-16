@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Transactions;
 
 namespace Exemplos1
 {
@@ -6,13 +8,16 @@ namespace Exemplos1
     {
         static void Main(string[] args)
         {
-            RegistrarOcorrencias registrarOcorrencias = new RegistrarOcorrencias(new RegistrarNoConsole());
-            registrarOcorrencias.Registrar("Estou registrando console.");
+            Quadrado quadrado = new Quadrado("Quadrado");
+            quadrado.Identificar();
+            quadrado.Desenhar();
 
-            RegistrarOcorrencias registrarOcorrencias2 = new RegistrarOcorrencias(new RegistrarNoArquivo());
-            registrarOcorrencias2.Registrar("Estou registrando no arquivo.");
+            Console.WriteLine();
 
-
+            Triangulo triangulo = new Triangulo("Triangulo");
+            triangulo.Identificar();
+            triangulo.Desenhar();
+            triangulo.Duplicar();
         }
     }
 }
