@@ -18,18 +18,18 @@ namespace Exemplos1._2_EXERCICIOS_SOLID.Exercicio_1.Aderente.Entitie
             switch (statusContaCliente)
             {
                 case EStatusContaCliente.NaoRegistrado:
-                    precoAposdesconto = precoProduto;
+                    precoAposdesconto = new ClienteNaoRegistrado().AplicarDescontoStatusConta(precoProduto);
                     break;
                 case EStatusContaCliente.ClienteComum:
-                    precoAposdesconto = (precoProduto - (Constantes.DescontoClienteComum * precoProduto));
+                    precoAposdesconto = new ClienteComum().AplicarDescontoStatusConta(precoProduto);
                     precoAposdesconto = _calculaDescontoFidelidade.AplicarDescontoFidelidade(precoAposdesconto, tempoDeContaEmAnos);
                     break;
                 case EStatusContaCliente.ClienteEsprecial:
-                    precoAposdesconto = (precoProduto - (Constantes.DescontoClienteEspecial * precoProduto));
+                    precoAposdesconto = new ClienteEspecial().AplicarDescontoStatusConta(precoProduto);
                     precoAposdesconto = _calculaDescontoFidelidade.AplicarDescontoFidelidade(precoAposdesconto, tempoDeContaEmAnos);
                     break;
                 case EStatusContaCliente.ClienteVIP:
-                    precoAposdesconto = (precoProduto - (Constantes.DescontoClienteVIP * precoProduto));
+                    precoAposdesconto = new ClienteVIP().AplicarDescontoStatusConta(precoProduto);
                     precoAposdesconto = _calculaDescontoFidelidade.AplicarDescontoFidelidade(precoAposdesconto, tempoDeContaEmAnos);
                     break;
                 default:
