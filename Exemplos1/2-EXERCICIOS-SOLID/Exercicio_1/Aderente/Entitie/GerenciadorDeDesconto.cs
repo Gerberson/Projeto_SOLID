@@ -10,7 +10,7 @@ namespace Exemplos1._2_EXERCICIOS_SOLID.Exercicio_1.Aderente.Entitie
         {
             decimal precoAposdesconto = 0;
 
-            decimal descontoPorFidelidade = (tempoDeContaEmAnos > 5) ? (decimal)5 / 100 : (decimal)tempoDeContaEmAnos / 100;
+            decimal descontoPorFidelidade = (tempoDeContaEmAnos > Constantes.DescontoMaximoPorFidelidade) ? (decimal) Constantes.DescontoMaximoPorFidelidade / 100 : (decimal)tempoDeContaEmAnos / 100;
 
             switch (statusContaCliente)
             {
@@ -18,13 +18,16 @@ namespace Exemplos1._2_EXERCICIOS_SOLID.Exercicio_1.Aderente.Entitie
                     precoAposdesconto = precoProduto;
                     break;
                 case EStatusContaCliente.ClienteComum:
-                    precoAposdesconto = (precoProduto - (0.1m * precoProduto)) - descontoPorFidelidade * (precoProduto - (0.1m * precoProduto));
+                    precoAposdesconto = (precoProduto - (Constantes.DescontoClienteComum * precoProduto));
+                    precoAposdesconto = descontoPorFidelidade - (descontoPorFidelidade * precoAposdesconto);
                     break;
                 case EStatusContaCliente.ClienteEsprecial:
-                    precoAposdesconto = (0.7m * precoProduto) - descontoPorFidelidade * (0.7m * precoProduto);
+                    precoAposdesconto = (precoProduto - (Constantes.DescontoClienteEspecial * precoProduto));
+                    precoAposdesconto = descontoPorFidelidade - (descontoPorFidelidade * precoAposdesconto);
                     break;
                 case EStatusContaCliente.ClienteVIP:
-                    precoAposdesconto = (precoProduto - (0.5m * precoProduto)) - descontoPorFidelidade * (precoProduto - (0.5m * precoProduto));
+                    precoAposdesconto = (precoProduto - (Constantes.DescontoClienteVIP * precoProduto));
+                    precoAposdesconto = descontoPorFidelidade - (descontoPorFidelidade * precoAposdesconto);
                     break;
                 default:
                     throw new NotImplementedException();
