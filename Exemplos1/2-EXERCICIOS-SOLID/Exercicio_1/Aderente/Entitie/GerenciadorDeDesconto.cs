@@ -4,13 +4,16 @@ using System.Text;
 
 namespace Exemplos1._2_EXERCICIOS_SOLID.Exercicio_1.Aderente.Entitie
 {
-    class GerenciadorDedescontoPorFidelidadeonto
+    class GerenciadorDedesconto
     {
+        private readonly ICalculaDescontoFidelidade _calculaDescontoFidelidade;
+        public GerenciadorDedesconto(ICalculaDescontoFidelidade calculaDescontoFidelidade)
+        {
+            _calculaDescontoFidelidade = calculaDescontoFidelidade;
+        }
         public decimal AplicardescontoPorFidelidadeonto(decimal precoProduto, EStatusContaCliente statusContaCliente, int tempoDeContaEmAnos)
         {
             decimal precoAposdesconto = 0;
-
-            decimal descontoPorFidelidade = (tempoDeContaEmAnos > Constantes.DescontoMaximoPorFidelidade) ? (decimal) Constantes.DescontoMaximoPorFidelidade / 100 : (decimal)tempoDeContaEmAnos / 100;
 
             switch (statusContaCliente)
             {
@@ -19,15 +22,15 @@ namespace Exemplos1._2_EXERCICIOS_SOLID.Exercicio_1.Aderente.Entitie
                     break;
                 case EStatusContaCliente.ClienteComum:
                     precoAposdesconto = (precoProduto - (Constantes.DescontoClienteComum * precoProduto));
-                    precoAposdesconto = descontoPorFidelidade - (descontoPorFidelidade * precoAposdesconto);
+                    precoAposdesconto = _calculaDescontoFidelidade.AplicarDescontoFidelidade(precoAposdesconto, tempoDeContaEmAnos);
                     break;
                 case EStatusContaCliente.ClienteEsprecial:
                     precoAposdesconto = (precoProduto - (Constantes.DescontoClienteEspecial * precoProduto));
-                    precoAposdesconto = descontoPorFidelidade - (descontoPorFidelidade * precoAposdesconto);
+                    precoAposdesconto = _calculaDescontoFidelidade.AplicarDescontoFidelidade(precoAposdesconto, tempoDeContaEmAnos);
                     break;
                 case EStatusContaCliente.ClienteVIP:
                     precoAposdesconto = (precoProduto - (Constantes.DescontoClienteVIP * precoProduto));
-                    precoAposdesconto = descontoPorFidelidade - (descontoPorFidelidade * precoAposdesconto);
+                    precoAposdesconto = _calculaDescontoFidelidade.AplicarDescontoFidelidade(precoAposdesconto, tempoDeContaEmAnos);
                     break;
                 default:
                     throw new NotImplementedException();
